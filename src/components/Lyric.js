@@ -42,7 +42,7 @@ function Lyric() {
               <>
                 <div className="card rounded-2 p-2  mb-4 mt-4 mx-5" key={ind}>
                   <img
-                    className=" card-img img-thumbnail"
+                    className=" card-img img-thumbnail w-72 m-auto "
                     src={s.album.cover_medium}
                     alt=""
                   />
