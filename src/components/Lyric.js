@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import '../stylesheet/Lyrics.css';
 
 // let api = 'https://api.lyrics.ovh/v1/artist/title';
@@ -14,6 +14,7 @@ function Lyric() {
     const res = await fetch(`${apiURL}/suggest/${input1}`);
     const result = await res.json();
     setlyrics(result.data);
+    console.log(result.data);
   };
 
   return (
@@ -47,12 +48,14 @@ function Lyric() {
                     alt=""
                   />
                   <p className="card-tital text-gray-900 fw-bolder">
-                    Titel : {s.album.title}{' '}
+                    Titel : {s.album.title}
                   </p>
                   <p className=" text-gray-900 card-subtitle fw-bolder">
                     artist : {s.artist.name}
                   </p>
-                  <audio className="mb-3" src={s.preview} controls></audio>
+                  {/* <audio className="mb-3" src={s.preview} controls></audio> */}
+
+                  <audio controls src={s.preview} type="audio/mp3"></audio>
                 </div>
               </>
             );
