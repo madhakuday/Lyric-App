@@ -45,7 +45,7 @@ function Lyric() {
                   <img
                     className=" card-img img-thumbnail w-72 m-auto "
                     src={s.album.cover_medium}
-                    alt=""
+                    alt="no images found"
                   />
                   <p className="card-tital text-gray-900 fw-bolder">
                     Titel : {s.album.title}
