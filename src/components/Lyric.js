@@ -46,25 +46,16 @@ function Lyric() {
                     className=" card-img img-thumbnail w-72 m-auto "
                     src={s.album.cover_medium}
                     alt=""
-                    key={ind}
                   />
-                  <p key={ind} className="card-tital text-gray-900 fw-bolder">
+                  <p className="card-tital text-gray-900 fw-bolder">
                     Titel : {s.album.title}
                   </p>
-                  <p
-                    key={ind}
-                    className=" text-gray-900 card-subtitle fw-bolder"
-                  >
+                  <p className=" text-gray-900 card-subtitle fw-bolder">
                     artist : {s.artist.name}
                   </p>
                   {/* <audio className="mb-3" src={s.preview} controls></audio> */}
 
-                  <audio
-                    key={ind}
-                    controls
-                    src={s.preview}
-                    type="audio/mp3"
-                  ></audio>
+                  <audio controls src={s.preview} type="audio/mp3"></audio>
                 </div>
               </>
             );
